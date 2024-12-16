@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header .logo-left,
+header .logo-right {
+    position: absolute;
+    height: 50px;
+    top: 10px;
+}
+
+header .logo-left {
+    left: 10px;
+}
+
+header .logo-right {
+    right: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+}
+
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+
+ul#juegos-list {
+    list-style: none;
+    padding: 0;
+}
+
+li.game-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+li.game-item .buttons form {
+    display: inline-block;
+}
+
+.edit-btn, .delete-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.messages {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.messages .error {
+    color: #ff0000;
+    background: #ffe6e6;
+    border: 1px solid #ff0000;
+}
+.messages .success {
+    color: #008000;
+    background: #e6ffe6;
+    border: 1px solid #008000;
+}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Juegos De Mesa - Trabajo Final SO{% endblock %}
+
+{% block content %}
+    <!-- Bloque para mostrar mensajes de flash -->
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div class="messages">
+                {% for category, message in messages %}
+                    <div class="{{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Formulario para crear un nuevo juego -->
+    <section class="form-container">
+        <h2>Crear un nuevo juego</h2>
+        <form action="/add" method="POST">
+            <input type="text" name="id" placeholder="ID (único)" required>
+            <input type="text" name="nombre" placeholder="Nombre del juego" required>
+            <input type="number" name="min_jugadores" placeholder="Mínimo de jugadores" required>
+            <input type="number" name="max_jugadores" placeholder="Máximo de jugadores" required>
+            <input type="text" name="limite_edad" placeholder="Límite de edad" required>
+            <input type="text" name="pais_origen" placeholder="País de origen" required>
+            <input type="number" name="costo" placeholder="Costo en USD" step="0.01" required>
+            <button type="submit">Crear Juego</button>
+        </form>
+    </section>
+
+    <!-- Lista de juegos -->
+    <section class="list-container">
+        <h2>Juegos disponibles</h2>
+        {% if juegos %}
+            <ul id="juegos-list">
+                {% for juego in juegos %}
+                    <li class="game-item">
+                        <p>
+                            <strong>{{ juego.nombre }}</strong> 
+                            - {{ juego.jugadores_min }}-{{ juego.jugadores_max }} jugadores 
+                            - Edad: {{ juego.limite_edad }} 
+                            - País: {{ juego.pais_origen }} 
+                            - ${{ juego.costo }}
+                        </p>
+                        <div class="buttons">
+                            <form action="/edit/{{ juego._id }}" method="GET">
+                                <button type="submit" class="edit-btn">Editar</button>
+                            </form>
+                            <form action="/delete/{{ juego._id }}" method="POST" onsubmit="return confirm('¿Seguro que deseas eliminar este juego?')">
+                                <button type="submit" class="delete-btn">Eliminar</button>
+                            </form>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay juegos disponibles. Crea uno nuevo.</p>
+        {% endif %}
+    </section>
+{% endblock %}
