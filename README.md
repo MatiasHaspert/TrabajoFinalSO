@@ -20,8 +20,9 @@ Instalar:
 # Instrucciones para Despliegue
 1. Clonar el Repositorio
 
-```git clone https://github.com/MatiasHaspert/TrabajoFinalSO.git```
-```cd TrabajoFinalSO```
+```bash git clone https://github.com/MatiasHaspert/TrabajoFinalSO.git```
+
+```bash cd TrabajoFinalSO```
 
 2. Iniciar los Servicios
 Construir y desplegar los contenedores:
