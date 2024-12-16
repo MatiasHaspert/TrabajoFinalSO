@@ -22,14 +22,21 @@ Instalar:
 
 ```bash
 git clone https://github.com/MatiasHaspert/TrabajoFinalSO.git
-cd TrabajoFinalSO```
-
+cd TrabajoFinalSO
+```
 2. Iniciar los Servicios
 Construir y desplegar los contenedores:
 
-```docker-compose up --build```
-
+```bash
+docker compose up --build
+```
 3. Acceder a la Aplicación
 Abre un navegador y visita:
 
 ● http://localhost:80 para interactuar con la aplicación web.
+
+4. Finalizar los Servicios
+Para detener y eliminar los contenedores:
+```bash
+docker compose down
+```
