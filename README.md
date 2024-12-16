@@ -12,7 +12,9 @@ Almacena de forma persistente los datos relacionados con los juegos de mesa.
 
 # Requisitos para Ejecutar el Proyecto
 Instalar:
+
 ●Docker
+
 ●Docker Compose
 
 # Instrucciones para Despliegue
