@@ -13,19 +13,23 @@ Almacena de forma persistente los datos relacionados con los juegos de mesa.
 # Requisitos para Ejecutar el Proyecto
 Instalar:
 
-●Docker
+● Docker
 
-●Docker Compose
+● Docker Compose
 
 # Instrucciones para Despliegue
 1. Clonar el Repositorio
 
 ```bash
 git clone https://github.com/MatiasHaspert/TrabajoFinalSO.git
-
-```cd TrabajoFinalSO```
+cd TrabajoFinalSO```
 
 2. Iniciar los Servicios
 Construir y desplegar los contenedores:
 
 ```docker-compose up --build```
+
+3. Acceder a la Aplicación
+Abre un navegador y visita:
+
+● http://localhost:80 para interactuar con la aplicación web.
